@@ -1,0 +1,1 @@
+Quick and dirty Kraken devtool for JSX files
