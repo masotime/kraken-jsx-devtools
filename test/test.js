@@ -1,9 +1,11 @@
-var assert = require('assert'),
-	chai = require('chai'),
+'use strict';
+
+var chai = require('chai'),
 	fs = require('fs'),
-	should = chai.should(),
 	jsxDev = require('../index'),
 	path = require('path');
+
+chai.should();
 
 describe('kraken-jsx-devtools', function() {
 
@@ -16,13 +18,13 @@ describe('kraken-jsx-devtools', function() {
 			if (err) {
 				return done(err);
 			} else {
-				fs.readFile(targetPath, 'utf8', function(err, js) {
-					if (err) {
-						return done(err);
+				fs.readFile(targetPath, 'utf8', function(err2, js) {
+					if (err2) {
+						return done(err2);
 					} else {
-						middleware(jsx, null, function(err, compiled) {
+						middleware(jsx, null, function(err3, compiled) {
 							if (err) {
-								return done(err);
+								return done(err3);
 							} else {
 								compiled.should.equal(js);
 								done();
@@ -30,10 +32,9 @@ describe('kraken-jsx-devtools', function() {
 						});
 					}
 
-				})
+				});
 			}
 		});
 
 	});
-	
 });
