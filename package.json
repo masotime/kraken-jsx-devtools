@@ -1,6 +1,6 @@
 {
   "name": "kraken-jsx-devtools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kraken Devtools to allow runtime compilation of JSX files during development",
   "main": "index.js",
   "scripts": {
